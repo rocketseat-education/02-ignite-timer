@@ -36,6 +36,11 @@ interface CyclesContextProviderProps {
   children: ReactNode
 }
 
+localStorage.setItem(
+  '@ignite-timer:cycles-state-1.0.0',
+  JSON.stringify({ cycles: [], activeCycleId: null }),
+)
+
 export function CyclesContextProvider({
   children,
 }: CyclesContextProviderProps) {
